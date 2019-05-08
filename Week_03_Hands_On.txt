@@ -1,0 +1,16 @@
+3-1
+    2.  Current working directory: /root
+    3.  Pressing 'cd' did not change the current directory because there was no path specified for the command "cd" to go to
+    4.  Pressing 'cd .' did not change the current directory because the "." refers to the current directory
+    5.  Pressing 'cd ..' changed the curent directory to '/' because the '..' refers to the previous directory in the tree structure
+    6.  The directory changed, I am currently in '/root', I specified a relative path because there was no '/' in front of the path to define the start point for an absolute path
+    7.  The error message message I got was '-bash: cd etc: No such file or directory' becuase the 'etc' directory is not in the current working directory
+    8.  The directory changed because the '/' introduced the absolute path to navigate to
+    9.  The current directory changed back to the root level because this is an absolute path to the root directory
+    10. The current directory changed to the same path as it would have if you used '/home/user1'
+    11. I used the relative path from my current working directory to the Desktop. I am now at '/home/user1/Desktop'
+    13. The relitive pathname took me up a level in the tree path and then the 'sysconfig' took me down into the specified directory
+    14. The relative path was acceptable, but the absolute path would have been better because it would have been a shorter command to type
+
+3-2
+    1.
