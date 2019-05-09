@@ -13,4 +13,42 @@
     14. The relative path was acceptable, but the absolute path would have been better because it would have been a shorter command to type
 
 3-2
-    1.
+    3.  After pressing Tab the command filled with 'cd root/' because that is the first directory below '/' that the shell found. It contains 1 directory that a starts with 'ro'
+    5.  The display did not change when I pressed Tab
+    6.  There are 2 directories that begin with 'b'
+    7.  The command expanded to cd bin/ because that was the only match in the directory
+    8.  There are 2 subdiretories under root that begin with "m"
+
+3-3
+    3.  There are a bunch of files in the list.  Some of them have extensions, the most abundant extension i see is a '.d' which is referring to 'directory'
+    4.  The display shows the files in the current directory in a vertical list with a "--More--" at the end
+    6.  The display shows the files in the current directory in a vertical list with a ":" at the end
+    9.  The current working directory is '/root'
+    10. This time the ls command gave me the contents of the directory I supplied without changing my current working directory.
+    11. There were no files listed with the ls command. these files are hidden because they have the '.' in front.
+    12. there are 3 regular files and a directory
+    13. There was a large list of files in the '/bin' directory.  They are mostly executable files
+    14. There is permissions information and creation date and time information.  The 'll' command is an alias to the 'ls -l' command so it shows the same information.
+    15. The etc file is a directory
+    16. The inittab is an 'ASCII text'
+    17. The information is very explicit and is much more descriptive
+
+3-4
+    2.  The file has 2 files
+    5.  The top 10 lines of the inittab file are shown
+    6.  With the '-5' command shows the first 5 lines and the '-3' shows the first 3
+    7.  The last 10 lines of the inittab file are shown
+    8.  The 'tail -5' shows the last 5 lines of the file
+    9.  The file is an executable type and should not be opened with a text editor
+
+3-5
+    3.  Nothing was displayed because we were not in edit mode.  Text entry can be completed in edit mode
+    4.  The cursor did not move, and now we are in command mode.  The 'x' key removed the currently underlined letter and i brougt us into the same position between the 't' and the 'e' and the 'h' got inserted before the cursor
+    9.  The display reads '"sample1" [New] 12L, 551C written
+    12. The file type is 'ASCII text'
+    13. The display reads '"sample1" 12L, 551C' which doesnt have the 'New' flag or the 'written' command from the save option
+    15. The date time stamp was placed at the bottom of the file because the r command appends the file where the cursor is currently placed
+    16. The 'yy' does a copy not a cut and the 'P' command pastes above the current lines
+    19. The 'w' command saved a copy when you gave it a new file name to use
+    20. I was not able to quit because there were unsaved changes to the document that hadn't been saved
+    23.
