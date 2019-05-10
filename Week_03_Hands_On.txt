@@ -51,4 +51,39 @@
     16. The 'yy' does a copy not a cut and the 'P' command pastes above the current lines
     19. The 'w' command saved a copy when you gave it a new file name to use
     20. I was not able to quit because there were unsaved changes to the document that hadn't been saved
-    23.
+    26. I was unable to get the 'l,$ s/to/To/g' to function, so I used '%s/to/To/g'
+    27. The changes were undone
+    33. the word 'flies' was replaced with 'flies and bears'
+
+3-6
+    2.  3 files exist with the word 'sample'
+    3.  all files are shown because of the wild card '*'
+    4.  'No such file or directory' is shown because there is no exact match
+    5.  'sample1 sample2 sample3' is shown because of the single character wildcard '?' is used
+    6.  'No such file or directory' is shown because there is no file that is that length with 'sample' and then 2 more characters as wildcards
+    7.  'sample1 sample3' is shown becasue the [] allow you to specifiy the characters you are looking for
+    8.  'sample2' is shown because the '!' characeter acts as an inverse function and shows you the opposite
+    9.  'sample1 sample2 sample3' is shown because the '-' denotes a range
+    10. 'No such file or directory' is shown because it found no match for the inverse selection
+
+3-7
+    2.  two lines that contained "Inn" were shown because grep by default returns the lines where the searched item is found
+    3.  the entire file was shown because it contained the word "Inn"
+    4.  Nothing was returned because case sensitivity
+    5.  This returned the same as the first command because the '-i' made it case insensitive
+    6.  All of the capital "I"s were returned even the ones in front of the word Inn because that was all it was searching for
+    7.  All the instances of I that were standing alone with spaces on either side were returned
+    8.  Instances of the word "the" were returned becasue the '.' is a single character wildcards
+    9.  All instances of words starting with 'w' and ending with 'e' with up to 3 characters inbetween showed up becasue the '.' wildcard is 0-1 character each
+    10. Nothing is displayed becasue the '^' symbol refers to the begining of the line and you cant have space in front of the begining of the line
+    11. It showed the lines that began with the letter "I"
+    12. Nothing is shown because the standard grep doesn't use the () as a command to search
+    13. It returned all instances of 'we' and of 'next' becasue the (|) acts as an 'OR' operator
+    14. It returned the lines where the word 'Inn' was at the end of the line because the character '$' represents the end of the line when using grep
+    15. It returned the lines with a question mark at the end for the same reason above
+    16. This command returns any blank lines in the file.  It looks for the begining of a line immediately followed by the end of the line
+
+Discovery Exersise 6
+    I ran the 'yum update vim-minimal' and it installed version 2:7.4.475-2.fc20
+    The 'yum install vim' installed 'vim-enhanced' and 3 dependancies: gpm-libs, vim-common, and vim-filesystem
+    I walked through the vim toutorial and visited www.vim.org
