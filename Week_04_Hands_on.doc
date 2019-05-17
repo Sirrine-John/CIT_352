@@ -10,68 +10,68 @@
     4.  There are 6 files and 2 directories.  Files:[anaconda-ks.cfg, foruser1/, initial-setup-ks.cfg, mysamples/, sample1, sample1A, sample2, sample3] Our last command added the copy of sample1 as sample1A because it copies by default in the current directory.
     5.  The file structure is the same as above because the file we placed inside the 'mysamples' directory
     6.  The 'sample1B' was successfully copied into the 'mysamples' directory.
-    7.
-    8.
-    9.
-    10.
-    11.
+    7.  There are 2 files and 2 directories [sample1B, sample2, todelete/, undermysamples/] the '.' is a reference to the current directory
+    8.  The file was successfully copied
+    9.  The message was 'cp: overwrite mysamples/sample2?' because we are wanting to copy a file with the same name into the directory, there are now 6 files [sample1, sample1B, sample2, sample3, todelete/, undermysamples/], the cp command copied the listed files to the location of the last item in the list.
+    10. The message is 'cp: omitting directory mysamples' because you have to use the '-R' option to recursively copy directories and files
+    11. The directory was successfully copied along with all of the subfiles and directories
 4-3
-    3.
-    4.
-    5.
-    7.
-    9.
-    12.
-    16.
+    3.  The message is 'mv: missing destination file operand after sample1' becuase we provided a source but no destination to move to.
+    4.  There are 10 files called [anaconda-ks.cfg, foruser1/, initial-setup-ks.cfg, mysamples/, sample1A, sample1B, sample2, sample3, sample4]  sample1 was renamed to sample4
+    5.  There are 9 files called [anaconda-ks.cfg, foruser1/, initial-setup-ks.cfg, mysamples/, sample1A, sample1B, sample2, sample3] 'sample4' was moved into the subdirectory 'mysamples'
+    7.  there are 6 files [sample1, sample1B, sample2, sample3, todelete/, undermysamples/] sample4 moved to the
+    9.  The message is 'mv: overwrite mysamples/sample2' because there is a sample2 already in the mysamples directory and we are trying to move sample4 to that directory with that name
+    12. There are 7 files left in the directory because we just moved sample2 and sample 3 out of the current directory.
+    16. The 'mv' command doesn't require the recursive operator because it isn't creating new files, it is just changing the referential links and not touching the contents of the files.
 4-4
-    2.
-    3.
-    4.
-    6.
-    7.
-    9.
-    10.
+    2.  The files are [sample1, sample1A, sample1B, sample2, sample3, todelete/, undermysamples/] the link counter for sample1 is 1
+    3.  Nothing is output to denote that the files are linked.  Nothing in 'ls -l' showes that these 2 files are hard linked.  The link count for both files is 2.  The ls -li shows that both files have the same inode number indicating the hard link.
+    4.  The link count for each of the files is now 3 becasue there are 3 headers pointing at the same inode
+    6.  The contents of each file is exactly the same because the hard link is a referance to the exact data location and is not a copy
+    7.  Nothing indicates the file linked to when using 'ls -F', 'ls -l' shows 'symlinksample -> sample2' to show what the file is linked to.  The inode numbers are different.
+    9.  The size of the symlink is much smaller than the sample2 file because all it is is a pointer that sends the user to the actual data. The contents contain the new line because the link redirected the 'vi' command to the actual data to make the edit.
+    10. The file type is listed as a symbolic link. Current directory is '/root/samples/net-scripts' the files from the 'network-scripts' directory is listed.  This type of linking is useful because you can make complicated directories easy to find in you file structure or make the paths shorter
 4-5
-    2.
-    3.
-    4.
-    5.
-    6.
-    7.
-    8.
-    9.
-    10.
+    2.  The locate command did not find it because the directory DB hasn't been updated
+    3.  The locate command found it because we ran the manual DB upate.  It found the file quickly
+    4.  The find command found the file and it was quick because the file is in the root directory
+    5.  The find command found the file and it was quick becuase we specified the directory to look in
+    6.  The message 'no newfile in' was returned because the file path was not found in the path. The /root path is not in the path but the /root/bin is in the path
+    7.  The which file found grep and gave some info about the file
+    8.  The 'find /root -name "sample"' returned no results becasue there is no direct match for the word 'sample' underneith the /root directory
+    9.  The command 'find /root -type l' returned all of the files that are links because that is what the option 'l' does
+    10. The only file that shows up is the newfile we created
 4-6
-    3.
-    4.
-    5.
-    6.
-    7.
+    3.  The command worked and removed both directories because they were both empty
+    4.  The message is 'rm: remove regular file sample1' and also for sample1A and sample1B
+    5.  There was no prompt because the '-f' command is force and overrides any prompt
+    6.  'rmdir: failed to remove samples: Directory not empty' was displayed because by default the command wont delete a directory that has contents
+    7.  The command successfully removed the directory and it's contents
 4-7
-    3.
-    4.
-    5.
-    6.
-    7.
-    8.
-    10.
-    12.
-    14.
-    17.
-    19.
-    23.
-    24.
+    3.  Everyone has full Read, Write, Execute permissions
+    4.  All permissions have been removed
+    5.  I was able to remove the file because I am root user
+    6.  I am currently in '/', I see all of the system folders and links
+    7.  The owner and group owner are both root, user1 would be placed in the 'other' group, as the user1 user I would have read and Execute
+    8.  There are no files in this directory
+    10. I was successful navigating to the directory becuase I put in an excat path to navigate to. I was able to see the contents because of the read access.  I was not able to remove because user1 didn't have permissions.  I saw 'rm: cannot remove hosts: Permission denied'
+    12. The permissions were successfully changed becuse I was logged in as root
+    14. I was successful because we gave the other user group was given the write permissions
+    17. the owner and group owner is root agian and user1 would be in the others permission group agian, I have read and write permissions
+    19. The 'cat' command was successful because I only needed read to do that.  The vi changes were not successful because user1 does not have write permissions
+    23. The vi edit was successful becuase user1 now has write permissions granted by the change we made as root
+    24. The hosts file is not executable and shouldn't be becuase there is no inner code to run in the file.  It is more of a configuration file.  /bin contains system commands that should be executable because that makes the system and the shell function correctly.
 4-8
-    2.
-    3.
-    4.
-    6.
+    2.  I see [Desktop, Documents, Downloads, Music, Pictures, Public, Templates, Videos]
+    3.  Default umask is 0002
+    4.  utest1 has permissions of -rw-rw-r-- and udir1 has permissions of drwxrwxr-x  These both seem to align with what they should have been
+    6.  utest2 has permissions of -rw-rw---- and udir2 has permissions of drwxrwx---  This seems to line up correctly
 4-9
-    3.
-    4.
-    5.
-    7.
-    8.
+    3.  I was successful because I was logged in as root
+    4.  Again it was successful because I am logged in with permissions to change that.
+    5.  The permissions of root allow you to change the ownership
+    7.  The '-R' option makes the command recursive and changes all subfiles and directories found in the path.
+    8.  Yes, I was able to delete it because I am logged in a the root user
 
 Discovery Exercises
 1.
