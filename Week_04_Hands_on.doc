@@ -74,6 +74,17 @@
     8.  Yes, I was able to delete it because I am logged in a the root user
 
 Discovery Exercises
-1.
-3.
-6.
+1.  In /bin it contains all of the standard commands that we use when interacting with the Operating system.  The FHS structure is defined to make using linux easier.  It groups like programs together as well as providing standard places for items to be installed.  This standard allows for greater uniformity accross systems and increased interoperability between applications and uniformity of documentation.
+3a. locate test
+ b. which awk
+ c. find /usr -type f -size +50k
+ d. find /usr -type f -size -70k
+ e. find / -type l
+ f. find /var -mmin -60
+ g. find /var -mtime -6
+ h. find /home -size 0
+ i. find /etc -group bin
+6.  chmod 744 /public/sample1
+    chmod 546 /public/sample2
+    chmod 150 /public/sample3
+    chmod 544 /public/sample4
