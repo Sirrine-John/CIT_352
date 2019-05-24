@@ -1,26 +1,78 @@
 5-1
-    2.  
-    3.  
-    4.  
-    5.  
-    6.  
-    7.  
-    8.  
-    9.  
+    2.  'tty6' is the 6th user interface terminal.  It is a character device because it takes user input character by character. the major number is 4 and the minor is 6
+    3.  The file was removed successfully
+    4.  I was not successful, it took my username and then did not return any result.
+    5.  That command recreated the directory that we forcefully removed.  Performing the ls -l command shows that the directory was recreated.
+    6.  I was successful in logging in because the directory exists for tty6 and is now functional
+    7.  The files are all tty devices and their major numbers are all the same being the number 4, and their minor numbers are all different and range from 0 to 9, because they are all the same type of device but they are all inidvidual devices.
+    8.  There are 162 files in the /dev folder. The total size is 80 kb.  This is becuasse the interfaces are exxentially links and not actually contain data below them in the directory. 
+    9.  Character Devices:
+        1 mem
+        4 /dev/vc/0
+        4 tty
+        4 ttyS
+        5 /dev/tty
+        5 /dev/console
+        5 /dev/ptms
+        7 vcs
+        10 misc
+        13 input
+        14 sound
+        21 sg
+        29 fb
+        99 ppdev
+        116 alsa
+        128 ptm
+        136 pts
+        162 raw
+        180 usb
+        188 ttyUSB
+        189 usb_device
+        202 cpu/msr
+        203 cpu/cpuid
+        226 drm
+        250 hidraw
+        251 usbmon
+        252 bsg
+        253 watchdog
+        254 rtc
+    Block Devices:
+        259 blkext
+        8 sd
+        9 md
+        11 sr
+        65 sd
+        66 sd
+        67 sd
+        68 sd
+        69 sd
+        70 sd
+        71 sd
+        128 sd
+        129 sd
+        130 sd
+        131 sd
+        132 sd
+        133 sd
+        134 sd
+        135 sd
+        253 device-mapper
+        254 mdp
+        There are 2 tty devices which are major number 4 along with /dev/vc/0. This list is a condensed version of that other list and seems to supress duplicate most major types.
 5-3
-    3.  
-    6.  
-    7.  
-    8.  
-    9.  
-    10. 
-    11. 
+    3.  Yes there is an icon in the left pane that looks like a disk that represents the iso "DVD". It was mounted to "/run/media/user1/Fedora-Live-Desktop-x86_64-20-1".
+    6.  The DVD is not automatically mounted.
+    7.  I received "mount: /dev/sr0 is write-protected, mounting read-only".  Yes the drive was mounted
+    8.  Yes, it is the same directories because it is the same ISO, just mounted differently.
+    9.  The link points to sr0.
+    10. Earlier the iso was mounted to /run/media/user1/. The device file is different than it was before.
+    11. The DVD was successfully dismounted
 5-4
-    3.  
-    5.  
-    7.  
-    8.  
-    14.
+    3.  /dev/sda1, /dev/sda2, and /dev/sda3 are available and were created at the initial setup of the OS.  There are 2 regular Linux file system types and one Linux swap system
+    5.  There are 4 partitions and sda4 is an extended file system
+    7.  There are now 5 partitions. hda5 is a standard Linux filesystem
+    8.  Type 82 is used for swap. to change the partition type you would press 't'
+    14. Yes, the lost+found directory is present
     19. 
     21.
 5-5
