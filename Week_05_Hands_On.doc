@@ -4,8 +4,8 @@
     4.  I was not successful, it took my username and then did not return any result.
     5.  That command recreated the directory that we forcefully removed.  Performing the ls -l command shows that the directory was recreated.
     6.  I was successful in logging in because the directory exists for tty6 and is now functional
-    7.  The files are all tty devices and their major numbers are all the same being the number 4, and their minor numbers are all different and range from 0 to 9, because they are all the same type of device but they are all inidvidual devices.
-    8.  There are 162 files in the /dev folder. The total size is 80 kb.  This is becuasse the interfaces are exxentially links and not actually contain data below them in the directory. 
+    7.  The files are all tty devices and their major numbers are all the same being the number 4, and their minor numbers are all different and range from 0 to 9, because they are all the same type of device but they are all individual devices.
+    8.  There are 162 files in the /dev folder. The total size is 80 kb.  This is because the interfaces are essentially links and not actually contain data below them in the directory. 
     9.  Character Devices:
         1 mem
         4 /dev/vc/0
@@ -58,7 +58,7 @@
         135 sd
         253 device-mapper
         254 mdp
-        There are 2 tty devices which are major number 4 along with /dev/vc/0. This list is a condensed version of that other list and seems to supress duplicate most major types.
+        There are 2 tty devices which are major number 4 along with /dev/vc/0. This list is a condensed version of that other list and seems to suppress duplicate most major types.
 5-3
     3.  Yes there is an icon in the left pane that looks like a disk that represents the iso "DVD". It was mounted to "/run/media/user1/Fedora-Live-Desktop-x86_64-20-1".
     6.  The DVD is not automatically mounted.
@@ -73,30 +73,37 @@
     7.  There are now 5 partitions. hda5 is a standard Linux filesystem
     8.  Type 82 is used for swap. to change the partition type you would press 't'
     14. Yes, the lost+found directory is present
-    19. 
-    21.
+    19. My third partition is not mounted, and I am not sure why.
+    21. The third partition is not mounted because we have no location telling it where to mount.
 5-5
-    3.  
-    5.  
-    8.  
-    9.  
-    15. 
-    19. 
+    3.  A.16.3GB
+        B.42.9GB
+    5.  There are 6 partitions and partition 6 is a logical type
+    8.  This command creates a physical volume and attaches it to /dev/sda6
+    9.  This command creates a Volume group and puts sda6 in it
+    15. The Lost+Found folder is the place that the file system puts corrupt files when running the fdisk command.
+    19. Volume1 and Volume2 are both mounted because we put the mounting information in the fstab file.  /dev/mapper/vg00 is listed as their device file
 5-6
-    2.  
-    3.  
-    4.  
-    6.  
-    7.  
-    8.  
-    9.  
-    10. 
+    2.  devtmpfs,4 tmpfs,/dev/sda3, /dev/sda5, /dev/sda1, /dev/mapper/vg00-volume2, /dev/mapper/vg00-volume1. The swap partition is not visible because we don't manually write to that partition, it is governed by the OS.
+    3.  There are 131072 inodes. 131061 inodes are free to use. There is a little bit of overhead space taken when initializing a drive.
+    4.  I received the message that the volume is mounted and the command cannot continue because the fsck command checks and repairs corruption and doing that to a live system can cause issues.
+    6.  The filesystem check happens quickly because there are not many files to check on that disk.
+    7.  That filesystem check took a little longer because it checked more things about the volume.
+    8.  the e2fsck -c command checks the disk contents as well as checking for bad blocks on the disk.
+    9.  This is not a good idea because it disables automatic file system checks.
+    10. The mount worked because it has a default mount point in the fstab file.
 5-7
-    11. 
-    13. 
-    17. 
-    18. 
+    11. this command checks the quota placed on the volume
+    13. The aquota files are 7168 kb and are used to track the different user quotas in this volume. User1 can use up to 60MB of space.
+    17. The quota changes are visible and user1 only has 1 file and it a size 0 file because we used the 'Touch' command
+    18. The values are the same, but I don't see the root user
 
 Discovery Exercises
-1.
-3.
+1. a. dumpe2fs -h /dev/sda1 = 128016 Inodes, 127636 inodes free, 380 Inodes used
+   b. mount = sysfs, proc, devtmpfs, securityfs, tmpfs, devtmpfs, tmpfs, tmpfs, cgroup, pstore, 9x cgroup, configfs, /dev/sda3, selinuxfs, systemd-1, mqueue, tmpfs, debugfs, hugetlbfs, /dev/sda5, /dev/sda1, /dev/mapper/vg00-volume2, /dev/mapper/vg00-volume1
+   c. fdisk /dev/sda | p = /dev/sda1 - /dev/sda6
+   d. vi /etc/fstab = At boot time, /dev/sda3 is mounted to /, /dev/sda1 is mounted to /boot, /dev/sda2 is mounted to swap, /dev/sda5 is mounted to /newmount, /dev/vg00/volume1 is mounted to /volume1, /dev/vg00/volume2 is mounted to /volume2
+3. 1. ext4 - meant to be the general use filesystem and is backwards compatible with ex3, ex2, and ex1.  It is the default file system on most modern Linux distros
+   2. xfs - similar to ext4 but is really good when working with large files but not as good working with small files.  Good to use on specific kinds of servers that deal with large files.
+   3. Btrfs - meant to address some of the shortcomings with ext by providing snapshots, rollbacks and other features.  Can be self-healing due to the "copy-on-write" nature of the system
+   4. Fat32 - This is a universally readable file system.  If you need to move files easily between 2 different operating systems or deal with shared file structures, you would use one of the FAT file systems.  Good for external devices.
