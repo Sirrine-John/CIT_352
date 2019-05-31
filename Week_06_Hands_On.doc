@@ -1,28 +1,29 @@
 6-1
     4.  There are check disk options and options to fix broken systems.
-    14. 
-    21. 
-    24. 
+    14. Automatic updates are usually turned off in production environments because you don't want any unexpected incompatabilities to interrupt your production environment.
+    21. WE are using tty1
+    24. A /boot partition was created because that contains the files needed during boot time of the operating system.  The / (root) is not managed by the LVM because it is the primary partition that everything else attaches to.
 6-2
-    2.  
-    5.  
-    6.  
-    7.  
-    8.  
-    10. 
-    13. 
-    15. 
-    17. 
+    2.  hardware-summary, lsb-release, media-info, partman, status, syslog.  syslog probably contains installation information and status probably contains current info about the system
+    5.  Yes, the installation did see my processor correctly
+    6.  a list of devices comes up.  each item in the list represents a physical device or connection to hardware
+    7.  It recognizes most of the RAM in my system but it doesn't show everything because there are some reserved ram for other functions or graphics rendering.  It showed useable memory.  You can adjust the video ram settings in the bios.
+    8.  This list seems to reference the hardware installed and how it is allocated and also lists all available options even if it is not used or populated currently.
+    9.  Each entry represents a step in the boot process.  It shows the pass and fail status of the operations that are performed at boot time.
+    10. Each entry represents the commands that are run and the output results from the OS as it is performing functions.  This is the more robust output log from the boot and start up of the system.
+    13. anaconda.ifcfg.log, anaconda.journal.log, anaconda.log,anaconda.packaging.log, anaconda.program.log,anaconda.storage.log,ks-script-Dgeiex.log,ks-script-trUW5Y.log.  I would gueaa that the 'packaging' file contains the install log. the 'program' file most likely contains information on the programs installed.
+    15. Yes the file contents look similar to the Ubuntu server.  The contents look almost identical because they are both running on the same hardware.
+    17. Each entry represents the Harware configuration on the system.
 6-3
-    9.  
-    11. 
-    12. 
-    14. 
-    18. 
-    19. 
-    20. 
+    9.  Yes, the file was copied successfully.
+    11. The output says 'No known data errors'
+    12. There are no detected problems on the mirror
+    14. Yes, the mirror is fully funtional
+    18. The directories are not listed because they are not mounted
+    19. The directories are listed now because we registered them with zfs
+    20. The quota was listed but will never be used because the entire webstorage filesystem is 4MB in size.
 6-4
-    6.  
-    9.  
-    13. 
-    26. 
+    6.  The root directory is not mounted on my filesystem.  it is mounted on the live disk
+    9.  Yes, those are my files from my regular installation of Fedora
+    13. Yes, I was successful at logging in
+    26. Yes, the root filesystem is mounted
