@@ -1,100 +1,50 @@
 1. SAS transfers data to SCSI disks via parallel cables.
-    True or False?
+    False
 2. Which of the following is used to describe a computer that is used to access an iSCSI
 hard disk across the network?
-    a. iSCSI target
-    b. iSCSI requestor
     c. iSCSI initiator
-    d. iSCSI terminator
 3. You want to view log files to get information about a problem that occurred during a
 Linux installation. In which directory will you likely find the log files?
-    a. /root/log
-    b. /sys/log
     c. /var/log
-    d. /etc/log
 4. Which of the following RAID levels is not fault tolerant?
     a. RAID 0
-    b. RAID 1
-    c. RAID 4
-    d. RAID 5
 5. Which command can you use during a system rescue to switch from the root of the live
 OS to the root of the Linux system installed on the hard disk?
-    a. mount
-    b. sysimage
     c. chroot
-    d. rescue
 6. Which of the following is not a type of RAID?
-    a. hardware RAID
-    b. software RAID
-    c. firmware RAID
     d. serial RAID
 7. Where is the /proc filesystem stored?
-    a. in RAM
     b. on the hard disk drive in the / directory
-    c. on the hard disk drive in the /etc directory
-    d. on the hard disk drive in the /var directory
 8. Which RAID level uses striping with parity?
-    a. 2
-    b. 4
-    c. 1
     d. 5
 9. RAID-Z is functionally equivalent to RAID level 1. 
-    True or False?
+    False
 10. SCSI devices that use an 8-bit-wide data path use ________________.
-    a. an 8-pin connector
-    b. a 15-pin connector
     c. a 50-pin connector
-    d. a 68-pin connector
 11. Which type of RAID is entirely configured during the Linux installation process?
-    a. hardware RAID
     b. software RAID
-    c. firmware RAID
-    d. serial RAID
 12. What command can be used to create a ZFS volume called test from the space on /dev/
 sdb and /dev/sdc that functions like RAID level 1?
-    a. zpool create test /dev/sdb /dev/sdc
     b. zpool create test mirror /dev/sdb /dev/sdc
-    c. zpool create test raidz /dev/sdb /dev/sdc
-    d. zpool create test raidz2 /dev/sdb /dev/sdc
 13. To which directory will the test ZFS volume from the previous question be mounted by
 the ZFS system?
-    a. /mnt/test
-    b. /media/test
-    c. /zfs/test
     d. /test
 14. Linux servers are typically installed in a rack using rackmount server hardware. Which
 of the following is used to describe the minimum height of a rackmount server?
     a. 1U
-    b. Series A
-    c. Type A
-    d. Level 5
 15. Which RAID level is also referred to as mirroring?
-    a. 0
     b. 1
-    c. 4
-    d. 5
 16. ZFS volumes are mounted at boot time from entries within /etc/fstab by default.
-    True or False?
+    True
 17. Which of the following could result in a segmentation fault (fatal signal 11) during a
 Fedora installation?
-    a. RAM problems
-    b. overclocked CPU
-    c. improper device driver
     d. all of the above
 18. SCSI-1 is also referred to as ________________.
-    a. fast and wide
-    b. slow and wide
     c. slow and narrow
-    d. fast and narrow
 19. Which of the following items are you typically required to configure during a Linux
 server installation? (Choose all that apply.)
     a. package selection
-    b. boot loader configuration
     c. system host name
-    d. update configuration
 20. Which of the following commands can be used on a Fedora 20 system to view hardware
 and service startup information during the boot process?
-    a. less /var/log/boot.log
-    b. less /var/log/messages
-    c. less /var/log/syslog
     d. journalctl -b
