@@ -1,40 +1,40 @@
 7-1
-    3.  The standard output displays the permissions, owner, and creation date.  The error output is that there is no sample3 file.  This is all displayed becuse the error is output and then the command output outputs secondly.
+    3.  The standard output displays the permissions, owner, and creation date.  The error output is that there is no sample3 file.  This is all displayed because the error is output and then the command output outputs secondly.
     4.  There is no standard output on the screen but there is an error output on the screen.  This is because we redirected the standard output into a file
-    5.  The contents are the file is the standard output from the previous command becuase we sent it there with the '>' operator.
-    6.  The standard output is displayed and no error is displayed.  This is becuase the 2> redirects the standard error into the file.
-    7.  The contents of the file is the Standard Error and the previous contents were overwirtten. This is because of the previous statement using the 2> command.  The > and 2> overwrtie file contents.
+    5.  The contents are the file is the standard output from the previous command because we sent it there with the '>' operator.
+    6.  The standard output is displayed and no error is displayed.  This is because the 2> redirects the standard error into the file.
+    7.  The contents of the file is the Standard Error and the previous contents were overwritten. This is because of the previous statement using the 2> command.  The > and 2> overwrite file contents.
     8.  Nothing is displayed on the screen because we redirected both the standard output and the standard error into files.
-    9.  The contents of the 'file' are the standard output becuause we used the > command
+    9.  The contents of the 'file' are the standard output because we used the > command
     10. The contents of the 'file2' are the standard error because we used the 2> command.
-    11. There is no output because both standard outputs were redirected. by using the > and 2> respecitvely
-    12. The contents are both the standard output and standard error becuase the &1 refers to the first variable entered which was 'file'
+    11. There is no output because both standard outputs were redirected. by using the > and 2> respectively
+    12. The contents are both the standard output and standard error because the &1 refers to the first variable entered which was 'file'
     13. The standard output was printed to the screen.  This is because you can only reference backwards in the command string &2 did not exist when the command was read.
-    14. The contents of file2 only contained the standard error becuase the standard output got printed to the display.
+    14. The contents of file2 only contained the standard error because the standard output got printed to the display.
     16. The contents of the file include previous contents plus a date stamp at the bottom. This happened because the >> is an append operator
     18. The contents had a second date time stamp entered at the end.  You can tell when they happened because they contain the date and the time down to the second in the stamp.
     19. I received the 'Try 'tr --help' for more information' error.  This happened because I didn't provide the command with any data to process
-    20. It output the contents of the /etc/hosts file and replaced the 'o' character with 'O'.  This happened becasue we fed the 'hosts' file into the 'tr' command using the '<'.
+    20. It output the contents of the /etc/hosts file and replaced the 'o' character with 'O'.  This happened because we fed the 'hosts' file into the 'tr' command using the '<'.
 
 7-2
     2.  The '|' command takes the standard output of the previous command and feeds it to the next command.  When you just call the command like normal it will basically do the same output, but the pipe allows you to manipulate or do another command to the data before passing it to the next step.
     3.  There are 15 lines displayed and I didn't have to supply a file name to 'grep' because the output of the previous command was taken as the standard input for the second command
     4.  The output is the same data as before but all of the lowercase 'n' letters have been turned to uppercase by the 'tr' command that the output was piped to
     5.  This command added a sort to the end of our last command. This has the same data but sorted in reverse alphabetical order.
-    6.  This is the same output as the last command.  The contents of the file are the same as the standard output because the 'tee' command splits the ouput to multiple places including the standard output, so it ended up both on the screen and in the file.
+    6.  This is the same output as the last command.  The contents of the file are the same as the standard output because the 'tee' command splits the output to multiple places including the standard output, so it ended up both on the screen and in the file.
     7.  The output is the count of the lines from the standard output that was fed from the previous command.  The file is the same as before because it was written on the step before the word count was used.
-    8.  The output gets the content of the 'nsswitch.conf' file and then retuns the lines that contain 'nisplus' and then deletes lines that contain the '#', then replaces 'nisplus' with 'NISPLUS' on lines that contain 'public'.  The 'tr' command can't be used for the same functionality because the tr is a character reader and 'sed' is a stream reader.  'sed' has many more capabilities and can replace and change whole words no just characters.
+    8.  The output gets the content of the 'nsswitch.conf' file and then returns the lines that contain 'nisplus' and then deletes lines that contain the '#', then replaces 'nisplus' with 'NISPLUS' on lines that contain 'public'.  The 'tr' command can't be used for the same functionality because the tr is a character reader and 'sed' is a stream reader.  'sed' has many more capabilities and can replace and change whole words no just characters.
     9.  The output is getting the contents of the 'hosts' file and then using 'awk' to return the first column and 3rd column of data.
 
 7-3
     3.  The env list is much smaller than the set list.  This is because the BASH variables can contain scripting code and other tools to be used in BASH.
     4.  The BASH shell prompt was changed to "Hello There:" because the PS1 variable is what contains the information for the prompt
-    5.  I recieved teh normal 'root@localhost ~]#' prompt because setting that variable was temporary in the BASH shell that we were currently in. To make the "Hello There:" permanant, you would have to make the changes in one of the BASH config files.
+    5.  I received the normal 'root@localhost ~]#' prompt because setting that variable was temporary in the BASH shell that we were currently in. To make the "Hello There:" permanent, you would have to make the changes in one of the BASH config files.
     6.  The lines added to the '.bash_profile' will prompt the user on login if they would like the "Hello There:" prompt.  If the user enters "y" then it will change the PS1 variable for the Session.
-    7.  I received teh "Hello There:" prompt because the PS1 variable was set when the command completed with a 'y' response
+    7.  I received the "Hello There:" prompt because the PS1 variable was set when the command completed with a 'y' response
     10. The variable is listed because we just created and set the variable in the previous step.
     11. The variable is not listed because it is a local variable and not a system wide variable.
-    12. The MYVAR is now listed in the 'env' list because teh 'export' funtion moved it from a local variable to a system wide variable.
+    12. The MYVAR is now listed in the 'env' list because teh 'export' function moved it from a local variable to a system wide variable.
     14. Nothing is listed because exiting the BASH resets the Variables
     17. 'My sample variable' is listed because the command in the .bash_profile is run on login of the user
     18. cp='cp -i'
@@ -53,6 +53,6 @@
 
 7-4
     4.  The file 'myscript' has -rw-r--r-- permissions.  The shell script did execute.  The '\t' inserts a tab and the '\a' raises an alert sound when combined with the -e parameter in 'echo'
-    5.  I got a permission denied because the exeucte permission has not been granted.
+    5.  I got a permission denied because the execute permission has not been granted.
     6.  The script did execute because the execute permission was granted and the file starts with #!./bin/bash
     
