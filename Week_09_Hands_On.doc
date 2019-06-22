@@ -1,0 +1,41 @@
+9-1
+  3.  a. Which process has a Process ID of 1? (PID = 1)  = /usr/lib/systemd/systemd --switched-root --system --deserialize 25
+      b. What character do most processes have in the terminal column (tty)?  = ?
+      c. What does this character in the terminal column indicate?  = It indicates that there is no user terminal associated with those processes
+      d. Which user started most of these processes?  = root
+      e. Most processes that are displayed on the screen are started by a certain parent process indicated in the Parent Process ID column (PPID). Which process is the parent to most processes?  = Process 2 which is "kthreadd"
+  5.  a. What character exists in the State (S) column for most processes, and what does this character indicate?  = The Character "S" is most prevalent and it means that the process is running but is in "sleep" currently waiting for a command so that it can run and process.
+      b. What range of numbers is it possible to have in the Nice (NI) column?  = 20 to -20
+      c. Which processes have the number 4 in the Flag (F) column, and what does this number indicate? =  This process used super-user privileges
+  6.  There are no zombie processes currently on the machine.
+9-2
+  2.  Process ID 1313
+  4.  The shell did not terminate
+  5.  The shell did not terminate
+  6.  The shell did not terminate
+  7.  The shell did terminate because the SIGKILL forces the process to close no matter what sending all resources to /dev/null
+9-3
+  2.  After running sleep 6000 the prompt does not come back because the process is running in the foreground and the prompt will not come back until the processes has finished.
+  3.  [1] 1513
+  6.  The '+' symbol tells us that that was the most recent job sent to the background
+  12. 1585
+9-4
+  3.  a. Number of processes:  133
+      b. Number of sleeping processes:  131
+      c. Amount of total memory (K):  2,032,920
+      d. Amount of total swap memory (K):  2,113,532
+  5.  1719
+  6.  It does take effect immediately
+  7.  The top utility immediately terminated
+  9.  1987
+  10. This command still didn't exit cleanly
+9-5
+  5.  My job will run at "Thu Jun 20 21:15:00 2019"  The output will be placed in the "/root/datefile" file
+  7.  There is no crontab currently for root
+  10. The job will run at 8:30 every Friday
+  11. Yes the output is the same as the cron -l command
+9-6
+  2.  These subdirectories are names after the processes or daemons that are started on the system.
+  3.  The information is the same but this command gives more information
+  4.  The information on the size is the same but it also gives more information on the swap file
+  6.  The state of init is Sleeping and it does list the correct PID and PPID of 1 and 0 respectively.
