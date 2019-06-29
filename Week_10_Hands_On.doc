@@ -6,7 +6,7 @@
     8.  Print job id is printer1-2
     9.  Print job id is printer1-3
     10. All of my print jobs are in the queue because the printer has been disabled and will not process until the printer is enabled.
-    11. A commented out configration file is shown becasue there are no custom configruations for the print job
+    11. A commented out configuration file is shown because there are no custom configurations for the print job
     12. The printter1-1 job was removed from the queue
     13. The CUPS daemon is running but the printing is disabled.  The print jobs align with the jobs in the lpstat
     14. There is a new print job and its id is 4
@@ -15,14 +15,14 @@
     2.  The printer1 is the default printer still
     4.  The jobs are not shown because they were created by the root user.
     10. These jobs are the same and you can perform the same operations here as well as in the Printers tab
-    11. The options are the the same that you can do for Printer1
+    11. The options are the same that you can do for Printer1
     13. The sample class is shown in the output.  user 1 is listed as the most recent because we sent a document to the printer from our user1 login.
-    14. It reflect the Sample Class because the Sample class was set up before the print job was sent while the others were created befor the Class.
+    14. It reflect the Sample Class because the Sample class was set up before the print job was sent while the others were created before the Class.
     15. Yes, the print job is shown
 10-3
-    2.  The file type is a folder that the System Log Daemon writed application logs to
-    3.  No there are no entries that specify facilities, priorities, or log file locations.  The last line specifies that it is going to try and reduce repeated messages that are witten to the log.
-    4.  Kernal messages get logged in /var/log/kern.log.  The "-" indicates a lower priority for the message
+    2.  The file type is a folder that the System Log Daemon writes application logs to
+    3.  No there are no entries that specify facilities, priorities, or log file locations.  The last line specifies that it is going to try and reduce repeated messages that are written to the log.
+    4.  Kernel messages get logged in /var/log/kern.log.  The "-" indicates a lower priority for the message
     6.  The CUPS daemon creates its own log files here.
     8.  4 copies are kept (4weeks)
     9.  There are 21 files in this directory.  Yes, these files, when rotated will replace the ones currently in the temp folder that the logrotat.conf specifies.
@@ -30,7 +30,7 @@
 10-4
     2.  The Systemd Journal Daemon (journald) uses this directory to save system logs
     3.  Uncomment SysteMaxFileSize to specify a max size for your log file.
-    4.  I can use the gdm command to see the GNOME display manager.  There are loggs from multiple days and most of them are divided with the "-- Reboot --" message
+    4.  I can use the gdm command to see the GNOME display manager.  There are logs from multiple days and most of them are divided with the "-- Reboot --" message
     6.  The entries since 5AM today are shown, there are 3 GLib-GObject: g_object_ref errors, 3 GLib-GObject: g_object_unref errors, and 2 could not fetch uid of session errors
     7.  Yes there are log files created by non Journald daemons
     8.  Yes, the contents are similar
@@ -38,15 +38,15 @@
     11. There are 13 files in the folder. Yes those files will override when the rotation happens
     12. There is only 1 copy kept which is the monthly rotate. The file will be rotated even if there is no contents.
 10-5
-    2.  The root user is found at the top of the file. User1 is described with the line: user1:x:1000:1000:user1:/home/user1:/bin/bash. There are 32 Daemon accounts. the passwordfor all of the entries is 'x'
+    2.  The root user is found at the top of the file. User1 is described with the line: user1:x:1000:1000:user1:/home/user1:/bin/bash. There are 32 Daemon accounts. the password for all of the entries is 'x'
     3.  root is the owner and everyone has permission to read the file.
-    4.  The password for the root and user1 accounts are an encrypted string of characters. for most othere accounts you either have a * or a !!
-    5.  root is the owner and group on this file. according to ls -l noone has any rights to this file.  The difference betweent these two files is that the passwd is more easily accessable and can be written to by root and read by anyone.  The shadow file is locked down to protect the encrypted passwords from most things in the system.
+    4.  The password for the root and user1 accounts are an encrypted string of characters. for most other accounts you either have a * or a !!
+    5.  root is the owner and group on this file. according to ls -l no one has any rights to this file.  The difference between these two files is that the passwd is more easily accessible and can be written to by root and read by anyone.  The shadow file is locked down to protect the encrypted passwords from most things in the system.
     6.  I receive a No such file or directory message.
-    7.  In the password field you either have the encryped string, a *, or !!.  The previous command essentially combined the two files into one.
+    7.  In the password field you either have the encrypted string, a *, or !!.  The previous command essentially combined the two files into one.
     8.  The pwconv command creates the shadow file with the passwords stored in it.
-    10. Shell: /bin/bash, Skel Loacation: /etc/skel, Home Directory: /home
-    11. In the skel folder the configuation files for BASH and Mozilla are there
+    10. Shell: /bin/bash, Skel Location: /etc/skel, Home Directory: /home
+    11. In the skel folder the configuration files for BASH and Mozilla are there
     13. The -m specifies to create the home directory.
     14. I didn't need to specify the -m parameter because the defs file says "CREATE_HOME yes"
     15. bozo has /bin/bash as shell and /home/bozo as home directory and the UID is 1001
@@ -59,22 +59,22 @@
     6.  The UID was changed to 666
     7.  The field two colons from the end of the line changed from blank to 14
     8.  The second to last field changed to 20089.  That number represents the distance in days from January 1 1970
-    9.  The column 5th from the end chnaged from 0 to 2
+    9.  The column 5th from the end changed from 0 to 2
     10. The 4th to the end field changed from 99999 to 40
     11. 3rd to the end field changed from a 7 to a 5
 10-7
     2.  $6$zsOjwV.E$1/bqp6Q18tXXtmeexi8lLs.hCaAWI2FjsCGpOXmDxdOI54jbXFcpckYY8vsmScWnW8VwN41FOovsMa0DZtfM6.
-    4.  There has been 2 ! added to the begining
+    4.  There has been 2 ! added to the beginning
     5.  I was not successful and got an Incorrect login message
-    9.  I was now sucessfully able to log in.
-    12. I recieved the message saying that /bin/fase is not listed in /etc/shells and the shell was changed anyway.
-    13. I was not successful becuase there was no valid shell to log into
+    9.  I was now successfully able to log in.
+    12. I received the message saying that /bin/false is not listed in /etc/shells and the shell was changed anyway.
+    13. I was not successful because there was no valid shell to log into
     16. Yes, I was successful and logged in.
 10-8
-    2.  Bozo owns most of the files in this directory becuase it is the home directory for the user bozo
-    3.  The home directory was left behind after the delete funtion.
-    4.  The user 666 owns most of the files becuase that was the user ID of the bozo user
-    5.  the -m adds the home direcotry and -u allows you to specify the UID.
+    2.  Bozo owns most of the files in this directory because it is the home directory for the user bozo
+    3.  The home directory was left behind after the delete function.
+    4.  The user 666 owns most of the files because that was the user ID of the bozo user
+    5.  the -m adds the home directory and -u allows you to specify the UID.
     7.  The home directory is /home/bozoette and the UID is 666
     8.  Bozoette owns most of these because that user is now 666 and Bozoette now has the same rights to those files.
 10-9
