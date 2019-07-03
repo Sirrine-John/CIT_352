@@ -1,0 +1,40 @@
+11-1
+    3.  The services file is 670293
+    4.  The compression ratio is 68.12%.  The extension is '.Z' and the file is 213887 in size.
+    7.  the hosts and inittab files were compressed.  The compress utility does not compress symbolic links.
+    9.  The compression ratio is 63.41%
+    11. The compression ratio is 79.7%.  This compression ratio is better than in step 4.  the file is 136088 in size
+    13. The compression ratio was 79.8% because the "-9" says to take the most time and compress the best
+    15. The compression ratio was 76.6% because the "-1" is a fast compression method
+    17. the compression ratio was 81.51% this is the best compression when compared to the others.  This is using a block sorting text compression which is better.  The file is 123932 in size
+11-2
+    2.  The size of test.tar is 20480
+    3.  This shows the contents of the tar file and their source.
+    5.  The extraction was successful
+    7.  The file is 4285 which is much smaller than just the plain .tar file.  This is because the .tar.gz file compresses and then packages the file instead of just packaging it up.
+    8.  The command shows the same thing as step 3.
+    10. The extraction was successful
+11-3
+    2.  Option o = copy out mode, v = verbose, c = use SVR4 format (same as -H newc), B = set the I/O block size to 5120 bytes, L = copy files that symbolic links are pointing to not just the link, O = Archive instead of standard output.
+    3.  Option i = extract(run in copy-in mode), v = verbose, t = list a table of contents of the input, B = Binary I/O to 5120 bytes, I = use an Archive file
+    4.  The files were put in the original location that they came from.  The files would have been overwritten.  The options are i = extract(run in copy-in mode), v = verbose, c = use SVR4 format (same as -H newc), d = make directories where needed, u = replace all files with no prompt, m = retain previous modification time, B = set the I/O block size to 5120 bytes
+    6.  A full directory dump backup was taken.  Yes the dumpdates file will be updated
+    7.  Yes, the file indicates the date and time that the dump happened
+    9.  Nothing was displayed.  relative paths were used from the current working directory.
+    10. The restored files from the dump file were displayed within the /new folder
+11-5
+    2.  There are a lot of packages in the RPM list.
+    3.  The ncompress package is installed, It was installed yesterday 
+    4.  It has a Public Domain license
+    5.  /usr/bin contain the executables for compress and uncompress
+    6.  The -e option erases the package.  it run uninstall scripts and erases all traces of the package.
+    7.  The ncompress package is not installed
+    8.  The ncompress package is listed.
+    9.  Ncompress is available for installed
+    11. The ncompress package is now installed
+11-6
+    2.  There are quite a few packages installed.
+    3.  ncompress is not installed
+    4.  ncompress is listed
+    7.  The purge option removes the package and all related config files
+    8.  This command installs the ncompress package.
