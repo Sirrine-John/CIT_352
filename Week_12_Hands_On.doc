@@ -1,0 +1,4 @@
+12-3 #2 says to use ftp.kernel.org (Links to an external site.), which was recently deprecated. Use kernel.org (Links to an external site.) instead.
+12-5 #2 should use 'apt-get' instead of yum since it is on Ubuntu.
+12-5 #15 You’ll need to install telnet before completing the rest of this section
+12-6 #15 You do not have to connect to your partner's server. Connect from one VM to the other instead.
