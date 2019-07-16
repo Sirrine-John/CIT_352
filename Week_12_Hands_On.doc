@@ -1,4 +1,37 @@
-12-3 #2 says to use ftp.kernel.org (Links to an external site.), which was recently deprecated. Use kernel.org (Links to an external site.) instead.
-12-5 #2 should use 'apt-get' instead of yum since it is on Ubuntu.
-12-5 #15 You’ll need to install telnet before completing the rest of this section
-12-6 #15 You do not have to connect to your partner's server. Connect from one VM to the other instead.
+12-1
+    2.  IPv4: 192.168.139.134   IPv6: fe80::20c:29ff:feda:caa6
+    5.  The ethernet setup is the same as we set in the gui.
+    6.  Yes my configuration is listed
+    10. Bootproto is = 'none'
+    11. Yes the device is listed
+    12. Yes because the settings are to use the DHCP, and my network is listed in the ifconfig.
+    13. Yes there are responses from the interface
+    17. 192.168.139.135
+    18. To set this as static, the line that contains 'iface eth0 inet dhcp' would need to be changed.
+    19. Yes because we are using dhcp
+12-2
+    2.  localhost.localdomain this is listed because I don't have a local domain in my network to connect to.
+    3.  Yes, 192.168.139.2
+    4.  Yes, the hosts file will be used.
+    6.  Yes, the name resolved
+    7.  the name was resolved, but the connection did not succeed
+    7.  the name was resolved, but the connection did not succeed
+    2-2.ubuntu87
+    4-2.  Many of the features are turned on in this version of linux vs just the hosts in Fedora.
+12-3 
+    2.  the ip for kernel.org came back as 198.145.29.83, the other address would be mail.kernel.org
+    3.  This came from the ISP because I do not have a local cache of it or a local dns entry.
+    4.  The dig command shows more of the ping packet with the question and the answer section of the packet request and return.
+12-5 
+    6.  Yes, I am currently using pts/3
+    8.  I received the error "Login incorrect"
+    13. The source IP is listed on the right of the who entry
+    17. the origin ip is listed because you are connected remotely
+    25. The IP i was connected from showed up
+12-6
+    5.  Yes, I am on a pseudoterminal
+    9.  The IP we entered told ssh where to go to start the session, and the ssh is automatically started because it is a server and is expecting outside connections.
+    18. PermitLocalCommand would be the line to change
+    19. The two linux machines are listed here because they both used ssh to connect to each other.
+12-7
+    was able to set up the vnc connector for the visual interface to start at boot and then use it to connect remotely.
